@@ -26,7 +26,11 @@
         <a href="#" class="logo">
   <img src="images/upscalemedia-transformed.jpg" alt="Anders Klevaas" />
 </a>
-        <ul class="nav-links">
+        <button class="nav-toggle" aria-label="Åpne meny" aria-controls="primary-navigation" aria-expanded="false">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="sr-only">Meny</span>
+        </button>
+        <ul id="primary-navigation" class="nav-links">
   <li><a href="#om">Om</a></li>
   <li><a href="#utdanning">Utdanning</a></li>
   <li><a href="#ferdigheter">Ferdigheter</a></li>
@@ -104,7 +108,7 @@
       <div class="courses">
         <div class="course">
           <div class="course-code">ITF00424</div>
-          <div class="course-name">Kunstig intelligens i studiehverdagen</div>
+          <div class="course-name">Kunstig intelligens i studiehverdagen (Ekstra-fag) </div>
         </div>
         <div class="course">
           <div class="course-code">ITF15019</div>
@@ -112,7 +116,7 @@
         </div>
         <div class="course">
           <div class="course-code">ITF31824</div>
-          <div class="course-name">Innføring i Generative AI</div>
+          <div class="course-name">Innføring i Generative AI (Ekstra-fag)</div>
         </div>
         <div class="course">
           <div class="course-code">ITM30719</div>
@@ -413,6 +417,34 @@
     // Stagger på skill-tags
     document.querySelectorAll(".skill").forEach((skill, i) => {
       skill.style.setProperty("--delay", `${i * 40}ms`);
+    });
+  }
+
+  // Mobilmeny-toggle
+  const nav = document.querySelector("nav");
+  const toggleBtn = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    // Lukk meny når en lenke velges
+    navLinks.forEach((link) =>
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        toggleBtn.setAttribute("aria-expanded", "false");
+      })
+    );
+
+    // Lukk på Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        nav.classList.remove("open");
+        toggleBtn.setAttribute("aria-expanded", "false");
+      }
     });
   }
 </script>
