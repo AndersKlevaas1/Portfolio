@@ -1,9 +1,9 @@
 :root {
-  --bg: #0b1020;
-  --bg-2: #111733;
-  --card: rgba(21, 28, 58, 0.7);
-  --card-solid: #151c3a;
-  --border: rgba(35, 48, 99, 0.8);
+  --bg: #1a1f2e;
+  --bg-2: #0f1419;
+  --card: rgba(45, 50, 65, 0.7);
+  --card-solid: #2d3241;
+  --border: rgba(60, 65, 85, 0.8);
   --text: #e6ebff;
   --muted: #93a0c8;
   --accent: #6c8cff;
@@ -47,10 +47,10 @@ body {
   position: absolute;
   inset: 0;
   background-image: linear-gradient(
-      rgba(108, 140, 255, 0.04) 1px,
+      rgba(108, 140, 255, 0.02) 1px,
       transparent 1px
     ),
-    linear-gradient(90deg, rgba(108, 140, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(108, 140, 255, 0.02) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
   -webkit-mask-image: radial-gradient(
@@ -258,8 +258,8 @@ nav {
 }
 
 .avatar {
-  width: 110px;
-  height: 110px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   margin: 0 auto 24px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
@@ -288,13 +288,17 @@ nav {
 }
 
 .avatar img {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  filter: contrast(1.05) brightness(1.02);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 .hero h1 {
@@ -391,12 +395,12 @@ h2 {
   border-radius: 16px;
   padding: 32px;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-card:hover {
-  transform: translateY(-3px);
   border-color: var(--accent);
+  box-shadow: 0 24px 48px rgba(108, 140, 255, 0.18);
 }
 
 .about-card p {
@@ -428,6 +432,7 @@ h2 {
 }
 
 .course {
+  display: block;
   background: var(--card);
   backdrop-filter: blur(12px) saturate(140%);
   -webkit-backdrop-filter: blur(12px) saturate(140%);
@@ -440,8 +445,12 @@ h2 {
   transform: translateY(14px);
   animation: fadeUp 0.6s ease forwards;
   animation-delay: var(--delay, 0ms);
-  transition: transform 0.25s ease, border-color 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .course::before {
@@ -458,12 +467,12 @@ h2 {
     transparent
   );
   transition: left 0.6s ease;
+  pointer-events: none;
 }
 
 .course:hover {
-  transform: translateY(-4px);
   border-color: var(--accent);
-  box-shadow: 0 8px 22px rgba(108, 140, 255, 0.2);
+  box-shadow: 0 24px 48px rgba(108, 140, 255, 0.22);
 }
 
 .course:hover::before {
@@ -483,6 +492,19 @@ h2 {
   font-size: 0.98rem;
 }
 
+.thesis-quote {
+  margin-top: 12px;
+  margin-bottom: 0;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(108, 140, 255, 0.12), rgba(56, 214, 197, 0.12));
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
 /* ---------- SKILLS ---------- */
 .skills {
   display: flex;
@@ -500,6 +522,7 @@ h2 {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text);
+  text-decoration: none;
   opacity: 0;
   transform: translateY(8px);
   animation: fadeUp 0.5s ease forwards;
@@ -508,9 +531,10 @@ h2 {
 }
 
 .skill:hover {
-  transform: translateY(-2px);
+  transform: scale(1.1);
   border-color: var(--accent);
   background: rgba(108, 140, 255, 0.15);
+  cursor: default;
 }
 /* ---------- FRITID / PROSJEKTER ---------- */
 .projects {
@@ -533,8 +557,7 @@ h2 {
   color: var(--text);
   position: relative;
   overflow: hidden;
-  transition: transform 0.25s ease, border-color 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project::before {
@@ -554,9 +577,8 @@ h2 {
 }
 
 .project:hover {
-  transform: translateY(-4px);
   border-color: var(--accent);
-  box-shadow: 0 10px 24px rgba(108, 140, 255, 0.2);
+  box-shadow: 0 28px 52px rgba(108, 140, 255, 0.22);
 }
 
 .project:hover::before {
@@ -801,15 +823,13 @@ h2 {
   padding: 22px;
   text-decoration: none;
   color: var(--text);
-  transition: transform 0.25s ease, border-color 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
   display: block;
 }
 
 .contact-card:hover {
   border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(108, 140, 255, 0.22);
+  box-shadow: 0 28px 52px rgba(108, 140, 255, 0.25);
 }
 
 .contact-label {
