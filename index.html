@@ -26,51 +26,69 @@
         <a href="#" class="logo">
   <img src="images/image.png" alt="Anders Klevaas" />
 </a>
-        <button class="nav-toggle" aria-label="Åpne meny" aria-controls="primary-navigation" aria-expanded="false">
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="sr-only">Meny</span>
-        </button>
+        <div class="nav-right">
+          <button class="lang-toggle" aria-label="Switch language">EN</button>
+          <button class="nav-toggle" aria-label="Åpne meny" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="sr-only">Meny</span>
+          </button>
+        </div>
         <ul id="primary-navigation" class="nav-links">
-  <li><a href="#om">Om</a></li>
-  <li><a href="#utdanning">Utdanning</a></li>
-  <li><a href="#ferdigheter">Ferdigheter</a></li>
-  <li><a href="#fritid">Fritid</a></li>
-  <li><a href="#github-analyzer">GitHub Analyzer</a></li>
-  <li><a href="#kontakt">Kontakt</a></li>
-</ul>
+          <li><a href="#om" data-no="Om" data-en="About">Om</a></li>
+          <li><a href="#utdanning" data-no="Utdanning" data-en="Education">Utdanning</a></li>
+          <li><a href="#ferdigheter" data-no="Ferdigheter" data-en="Skills">Ferdigheter</a></li>
+          <li><a href="#elkjop-kurs" data-no="Elkjøp-kurs" data-en="Elkjøp Courses">Elkjøp-kurs</a></li>
+          <li><a href="#fritid" data-no="Fritid" data-en="Projects">Fritid</a></li>
+          <li><a href="#github-analyzer">GitHub Analyzer</a></li>
+          <li><a href="#kontakt" data-no="Kontakt" data-en="Contact">Kontakt</a></li>
+        </ul>
       </div>
     </nav>
 
     <header class="hero">
       <div class="container">
         <div class="avatar reveal">
-  <img src="images/image.png" alt="Anders Klevaas" />
-</div>
+          <img src="images/image.png" alt="Anders Klevaas" />
+        </div>
         <h1 class="reveal">Anders Klevaas</h1>
-        <p class="tagline reveal">
+        <p class="hero-typewriter reveal">
+          <span data-no="Interessert i" data-en="Interested in">Interessert i</span> <span class="typewriter-word"></span><span class="typewriter-cursor">|</span>
+        </p>
+        <p class="tagline reveal" data-no="Bachelorstudent innenfor Informasjonssystemer med fordypning i datasikkerhet ved Høgskolen i Østfold." data-en="Bachelor's student in Information Systems with a specialization in cybersecurity at Østfold University College.">
           Bachelorstudent innenfor Informasjonssystemer med fordypning i datasikkerhet ved Høgskolen i Østfold.
-          <br />
-          <br>
-         Interessene mine spenner fra AI og sikkerhet til UX og design.
         </p>
         <div class="cta reveal">
-          <a href="#kontakt" class="btn btn-primary">Ta kontakt</a>
-          <a href="#utdanning" class="btn btn-secondary">Se utdanning</a>
+          <a href="#kontakt" class="btn btn-primary" data-no="Ta kontakt" data-en="Get in touch">Ta kontakt</a>
+          <a href="#utdanning" class="btn btn-secondary" data-no="Se utdanning" data-en="View education">Se utdanning</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="hero-stat">
+            <span class="hero-stat-number">3</span>
+            <span class="hero-stat-label" data-no="År med IT-Utdanning" data-en="Years in IT">År med IT-Utdanning</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">18</span>
+            <span class="hero-stat-label" data-no="Emner fullført" data-en="Courses completed">Emner fullført</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">HiØ</span>
+            <span class="hero-stat-label" data-no="Høgskolen i Østfold" data-en="Østfold University College">Høgskolen i Østfold</span>
+          </div>
         </div>
       </div>
     </header>
 
     <section id="om">
       <div class="container">
-        <h2 class="reveal">Om meg</h2>
-        <p class="section-sub reveal">Litt bakgrunn</p>
+        <h2 class="reveal" data-no="Om meg" data-en="About me">Om meg</h2>
+        <p class="section-sub reveal" data-no="Litt bakgrunn" data-en="A bit of background">Litt bakgrunn</p>
         <div class="about-card reveal">
-          <p>
+          <p data-no="Hei! Jeg heter Anders Klevaas og studerer IT med fokus på webutvikling, UX/UI-Design, sikkerhet og AI. Jeg liker å bygge løsninger som er både funksjonelle og pene å se på." data-en="Hi! I'm Anders Klevaas, an IT student with a focus on web development, UX/UI design, security and AI. I like building solutions that are both functional and visually appealing.">
             Hei! Jeg heter Anders Klevaas og studerer IT med fokus på
             webutvikling, UX/UI-Design, sikkerhet og AI. Jeg liker å bygge
             løsninger som er både funksjonelle og pene å se på.
           </p>
-          <p>
+          <p data-no="Gjennom studiet har jeg jobbet med alt fra databaser og programmering til kommunikasjonsdesign, prosjektledelse og kunstig intelligens. Jeg er nysgjerrig på ny teknologi og liker å være med der det skjer." data-en="Throughout my studies I've worked with everything from databases and programming to communication design, project management and artificial intelligence. I'm curious about new technology and like to be where things are happening.">
             Gjennom studiet har jeg jobbet med alt fra databaser og
             programmering til kommunikasjonsdesign, prosjektledelse og kunstig
             intelligens. Jeg er nysgjerrig på ny teknologi og liker å være med
@@ -82,171 +100,292 @@
 
     <section id="utdanning">
   <div class="container">
-    <h2 class="reveal">Utdanning</h2>
-    <p class="section-sub reveal">Emner jeg har tatt – Høgskolen i Østfold</p>
+    <h2 class="reveal" data-no="Utdanning" data-en="Education">Utdanning</h2>
+    <p class="section-sub reveal" data-no="Emner jeg har tatt – Høgskolen i Østfold" data-en="Courses I've taken – Østfold University College">Emner jeg har tatt – Høgskolen i Østfold</p>
 
     <div class="semester reveal">
-      <div class="semester-title">Høst 2023</div>
+      <div class="semester-title" data-no="Høst 2023" data-en="Fall 2023">Høst 2023</div>
       <div class="courses">
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itf10511.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITF10511</div>
-          <div class="course-name">Webutvikling</div>
+          <div class="course-name" data-no="Webutvikling" data-en="Web Development">Webutvikling</div>
         </a>
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itf14022.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITF14022</div>
-          <div class="course-name">Innføring i design av digitale produkter</div>
+          <div class="course-name" data-no="Innføring i design av digitale produkter" data-en="Introduction to Digital Product Design">Innføring i design av digitale produkter</div>
         </a>
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itf19019.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITF19019</div>
-          <div class="course-name">Innføring i programmering</div>
+          <div class="course-name" data-no="Innføring i programmering" data-en="Introduction to Programming">Innføring i programmering</div>
         </a>
       </div>
     </div>
 
     <div class="semester reveal">
-      <div class="semester-title">Høst 2024</div>
+      <div class="semester-title" data-no="Høst 2024" data-en="Fall 2024">Høst 2024</div>
       <div class="courses">
         <a href="https://www.hiof.no/studier/emner/iio/itk/2024/host/itf00424.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITF00424</div>
-          <div class="course-name">Kunstig intelligens i studiehverdagen (Ekstra-fag) </div>
+          <div class="course-name" data-no="Kunstig intelligens i studiehverdagen (Ekstra-fag)" data-en="Artificial Intelligence in Student Life (Extra)">Kunstig intelligens i studiehverdagen (Ekstra-fag)</div>
         </a>
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itf15019.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITF15019</div>
-          <div class="course-name">Innføring i datasikkerhet</div>
+          <div class="course-name" data-no="Innføring i datasikkerhet" data-en="Introduction to Cybersecurity">Innføring i datasikkerhet</div>
         </a>
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itf31824.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITF31824</div>
-          <div class="course-name">Innføring i Generative AI (Ekstra-fag)</div>
+          <div class="course-name" data-no="Innføring i Generative AI (Ekstra-fag)" data-en="Introduction to Generative AI (Extra)">Innføring i Generative AI (Ekstra-fag)</div>
         </a>
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itm30719.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITM30719</div>
-          <div class="course-name">Kommunikasjonsdesign</div>
+          <div class="course-name" data-no="Kommunikasjonsdesign" data-en="Communication Design">Kommunikasjonsdesign</div>
         </a>
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itm31019.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITM31019</div>
-          <div class="course-name">Digital markedsføring</div>
+          <div class="course-name" data-no="Digital markedsføring" data-en="Digital Marketing">Digital markedsføring</div>
         </a>
       </div>
     </div>
 
     <div class="semester reveal">
-      <div class="semester-title">Vår 2025</div>
+      <div class="semester-title" data-no="Vår 2025" data-en="Spring 2025">Vår 2025</div>
       <div class="courses">
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itf10319.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITF10319</div>
-          <div class="course-name">Databasesystemer</div>
+          <div class="course-name" data-no="Databasesystemer" data-en="Database Systems">Databasesystemer</div>
         </a>
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itl22519.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITL22519</div>
-          <div class="course-name">Forretningssystemer</div>
+          <div class="course-name" data-no="Forretningssystemer" data-en="Business Systems">Forretningssystemer</div>
         </a>
         <a href="https://www.hiof.no/studier/emner/iio/itk/2026/var/itm30617.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITM30617</div>
-          <div class="course-name">Utvikling av interaktive nettsteder</div>
+          <div class="course-name" data-no="Utvikling av interaktive nettsteder" data-en="Interactive Website Development">Utvikling av interaktive nettsteder</div>
         </a>
       </div>
     </div>
 
     <div class="semester reveal">
-      <div class="semester-title">Høst 2025</div>
+      <div class="semester-title" data-no="Høst 2025" data-en="Fall 2025">Høst 2025</div>
       <div class="courses">
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itd35014.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITD35014</div>
-          <div class="course-name">Bedriftspraksis</div>
+          <div class="course-name" data-no="Bedriftspraksis" data-en="Work Placement">Bedriftspraksis</div>
         </a>
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itf31314.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITF31314</div>
-          <div class="course-name">Prosjektledelse</div>
+          <div class="course-name" data-no="Prosjektledelse" data-en="Project Management">Prosjektledelse</div>
         </a>
         <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itl27019.html" target="_blank" rel="noopener noreferrer" class="course">
           <div class="course-code">ITL27019</div>
-          <div class="course-name">Informasjonssikkerhet</div>
+          <div class="course-name" data-no="Informasjonssikkerhet" data-en="Information Security">Informasjonssikkerhet</div>
         </a>
       </div>
     </div>
     <div class="semester reveal">
-  <div class="semester-title">
-  Vår 2026
-  <span class="badge-current" data-active-until="2026-06-01">Pågår</span>
-</div>
-  <div class="courses">
-    <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itf25019.html" target="_blank" rel="noopener noreferrer" class="course">
-      <div class="course-code">ITF25019</div>
-      <div class="course-name">Datasikkerhet i utvikling og drift</div>
-    </a>
-    <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itl28019.html" target="_blank" rel="noopener noreferrer" class="course">
-      <div class="course-code">ITL28019</div>
-      <div class="course-name">IT-strategi</div>
-    </a>
-    <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itm21922.html" target="_blank" rel="noopener noreferrer" class="course">
-      <div class="course-code">ITM21922</div>
-      <div class="course-name">UI-designprosjekt</div>
-    </a>
-    <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itf32012.html" target="_blank" rel="noopener noreferrer" class="course">
-      <div class="course-code">ITF32012</div>
-      <div class="course-name">Bacheloroppgave</div>
-      <p class="thesis-quote">I hvilken grad kan KI-assistert utvikling muliggjøre kostnadseffektiv automatisering av manuelle prosesser i små og mellomstore bedrifter?</p>
-    </a>
-  </div>
-  </div>
+      <div class="semester-title">
+        <span data-no="Vår 2026" data-en="Spring 2026">Vår 2026</span>
+        <span class="badge-current" data-active-until="2026-06-01" data-no="Pågår" data-en="Ongoing">Pågår</span>
+      </div>
+      <div class="courses">
+        <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itf25019.html" target="_blank" rel="noopener noreferrer" class="course">
+          <div class="course-code">ITF25019</div>
+          <div class="course-name" data-no="Datasikkerhet i utvikling og drift" data-en="Cybersecurity in Development and Operations">Datasikkerhet i utvikling og drift</div>
+        </a>
+        <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itl28019.html" target="_blank" rel="noopener noreferrer" class="course">
+          <div class="course-code">ITL28019</div>
+          <div class="course-name" data-no="IT-strategi" data-en="IT Strategy">IT-strategi</div>
+        </a>
+        <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itm21922.html" target="_blank" rel="noopener noreferrer" class="course">
+          <div class="course-code">ITM21922</div>
+          <div class="course-name" data-no="UI-designprosjekt" data-en="UI Design Project">UI-designprosjekt</div>
+        </a>
+        <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itf32012.html" target="_blank" rel="noopener noreferrer" class="course">
+          <div class="course-code">ITF32012</div>
+          <div class="course-name" data-no="Bacheloroppgave" data-en="Bachelor's Thesis">Bacheloroppgave</div>
+          <p class="thesis-quote" data-no="I hvilken grad kan KI-assistert utvikling muliggjøre kostnadseffektiv automatisering av manuelle prosesser i små og mellomstore bedrifter?" data-en="To what extent can AI-assisted development enable cost-effective automation of manual processes in small and medium-sized enterprises?">I hvilken grad kan KI-assistert utvikling muliggjøre kostnadseffektiv automatisering av manuelle prosesser i små og mellomstore bedrifter?</p>
+        </a>
+      </div>
+    </div>
 </section>
 
     <section id="ferdigheter">
       <div class="container">
-        <h2 class="reveal">Ferdigheter</h2>
-        <p class="section-sub reveal">Områder jeg har jobbet med</p>
+        <h2 class="reveal" data-no="Ferdigheter" data-en="Skills">Ferdigheter</h2>
+        <p class="section-sub reveal" data-no="Områder jeg har jobbet med" data-en="Areas I've worked with">Områder jeg har jobbet med</p>
         <div class="skills reveal">
-          <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener" class="skill">Webutvikling</a>
+          <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener" class="skill" data-no="Webutvikling" data-en="Web Development">Webutvikling</a>
           <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itf10511.html" target="_blank" rel="noopener" class="skill">HTML &amp; CSS</a>
           <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itf10511.html" target="_blank" rel="noopener" class="skill">JavaScript</a>
-          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itf10319.html" target="_blank" rel="noopener" class="skill">Databaser / SQL</a>
-          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itf19019.html" target="_blank" rel="noopener" class="skill">Programmering</a>
+          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itf10319.html" target="_blank" rel="noopener" class="skill" data-no="Databaser / SQL" data-en="Databases / SQL">Databaser / SQL</a>
+          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itf19019.html" target="_blank" rel="noopener" class="skill" data-no="Programmering" data-en="Programming">Programmering</a>
           <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itf14022.html" target="_blank" rel="noopener" class="skill">UX / UI-design</a>
-          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itm30719.html" target="_blank" rel="noopener" class="skill">Kommunikasjonsdesign</a>
-          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itm31019.html" target="_blank" rel="noopener" class="skill">Digital markedsføring</a>
-          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itf31314.html" target="_blank" rel="noopener" class="skill">Prosjektledelse</a>
-          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itf31824.html" target="_blank" rel="noopener" class="skill">Generativ AI</a>
-          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itl27019.html" target="_blank" rel="noopener" class="skill">Informasjonssikkerhet</a>
-          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itl22519.html" target="_blank" rel="noopener" class="skill">Forretningssystemer</a>
-          <a href="https://www.hiof.no/studier/emner/iio/itk/2024/host/itf00424.html" target="_blank" rel="noopener" class="skill">Kunstig intelligens</a>
+          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itm30719.html" target="_blank" rel="noopener" class="skill" data-no="Kommunikasjonsdesign" data-en="Communication Design">Kommunikasjonsdesign</a>
+          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itm31019.html" target="_blank" rel="noopener" class="skill" data-no="Digital markedsføring" data-en="Digital Marketing">Digital markedsføring</a>
+          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itf31314.html" target="_blank" rel="noopener" class="skill" data-no="Prosjektledelse" data-en="Project Management">Prosjektledelse</a>
+          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itf31824.html" target="_blank" rel="noopener" class="skill" data-no="Generativ AI" data-en="Generative AI">Generativ AI</a>
+          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/host/itl27019.html" target="_blank" rel="noopener" class="skill" data-no="Informasjonssikkerhet" data-en="Information Security">Informasjonssikkerhet</a>
+          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itl22519.html" target="_blank" rel="noopener" class="skill" data-no="Forretningssystemer" data-en="Business Systems">Forretningssystemer</a>
+          <a href="https://www.hiof.no/studier/emner/iio/itk/2024/host/itf00424.html" target="_blank" rel="noopener" class="skill" data-no="Kunstig intelligens" data-en="Artificial Intelligence">Kunstig intelligens</a>
           <a href="https://github.com" target="_blank" rel="noopener" class="skill">Git / GitHub</a>
           <a href="https://supabase.com" target="_blank" rel="noopener" class="skill">Supabase</a>
           <a href="https://cloudflare.com" target="_blank" rel="noopener" class="skill">Cloudflare</a>
-          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itl28019.html" target="_blank" rel="noopener" class="skill">IT-strategi</a>
-          <a href="https://docs.github.com/en/rest" target="_blank" rel="noopener" class="skill">API-integrasjon</a>
+          <a href="https://www.hiof.no/studier/emner/iio/itk/2025/var/itl28019.html" target="_blank" rel="noopener" class="skill" data-no="IT-strategi" data-en="IT Strategy">IT-strategi</a>
+          <a href="https://docs.github.com/en/rest" target="_blank" rel="noopener" class="skill" data-no="API-integrasjon" data-en="API Integration">API-integrasjon</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="elkjop-kurs">
+      <div class="container">
+        <h2 class="reveal" data-no="Kurs fra Elkjøp" data-en="Elkjøp Training Courses">Kurs fra Elkjøp</h2>
+        <p class="section-sub reveal" data-no="90+ fullførte interne kurs" data-en="90+ completed internal courses">90+ fullførte interne kurs</p>
+        <div class="elkjop-grid reveal">
+
+          <div class="elkjop-cat">
+            <div class="elkjop-cat-header">
+              <span class="elkjop-cat-name" data-no="Salg" data-en="Sales">Salg</span>
+              <span class="elkjop-cat-count">9</span>
+            </div>
+            <ul class="elkjop-list">
+              <li>Sales: Basic Step 1–5</li>
+              <li data-no="Sales: Kundemøte TECH" data-en="Sales: Customer Meeting TECH">Sales: Kundemøte TECH</li>
+              <li>Sales: Trusted Advisor Journey</li>
+              <li>Squaretrade: Salg – Behovsanalyse</li>
+            </ul>
+          </div>
+
+          <div class="elkjop-cat">
+            <div class="elkjop-cat-header">
+              <span class="elkjop-cat-name" data-no="Aftersales (ASO)" data-en="After Sales (ASO)">Aftersales (ASO)</span>
+              <span class="elkjop-cat-count">10</span>
+            </div>
+            <ul class="elkjop-list">
+              <li>ASO: Basic Step 1–5</li>
+              <li data-no="ASO: Returnhåndtering" data-en="ASO: Return and Repair">ASO: Return and Repair</li>
+              <li data-no="ASO: Tung løfting" data-en="ASO: Heavy Lifting">ASO: Heavy Lifting</li>
+              <li>ASO: Collect@Store</li>
+              <li>ASO: GDPR in Service Execution</li>
+            </ul>
+          </div>
+
+          <div class="elkjop-cat">
+            <div class="elkjop-cat-header">
+              <span class="elkjop-cat-name" data-no="Systemer" data-en="Systems">Systemer</span>
+              <span class="elkjop-cat-count">13</span>
+            </div>
+            <ul class="elkjop-list">
+              <li>System: Blueberry (POS)</li>
+              <li>System: Bluecare (Service)</li>
+              <li data-no="System: Launchpad – Lager & Plukk" data-en="System: Launchpad – Stock & Picking">System: Launchpad – Lager & Plukk</li>
+              <li>System: Quinyx App</li>
+              <li>System: People Self Service</li>
+              <li>System: E-CS Score</li>
+            </ul>
+          </div>
+
+          <div class="elkjop-cat">
+            <div class="elkjop-cat-header">
+              <span class="elkjop-cat-name" data-no="Compliance & GDPR" data-en="Compliance & GDPR">Compliance & GDPR</span>
+              <span class="elkjop-cat-count">12</span>
+            </div>
+            <ul class="elkjop-list">
+              <li data-no="Kurs i Antihvitvask (AML)" data-en="Anti-Money Laundering (AML)">Kurs i Antihvitvask (AML)</li>
+              <li>GDPR i Praksis</li>
+              <li data-no="Compliance: GDPR – Samtykke" data-en="Compliance: GDPR – Consent">Compliance: GDPR – Samtykke</li>
+              <li data-no="Compliance: IT-sikkerhet" data-en="Compliance: IT Security">Compliance: IT-sikkerhet</li>
+              <li data-no="Compliance: Betalingsterminaler" data-en="Compliance: Payment Terminals">Compliance: Betalingsterminaler</li>
+              <li data-no="Compliance: Finansiering & Forsikring" data-en="Compliance: Financing & Insurance">Compliance: Finansiering & Forsikring</li>
+            </ul>
+          </div>
+
+          <div class="elkjop-cat">
+            <div class="elkjop-cat-header">
+              <span class="elkjop-cat-name" data-no="Tjenester" data-en="Services">Tjenester</span>
+              <span class="elkjop-cat-count">8</span>
+            </div>
+            <ul class="elkjop-list">
+              <li data-no="Services: ID-beskyttelse" data-en="Services: ID Protection">Services: ID-beskyttelse</li>
+              <li>Services: Elkjøp Cloud</li>
+              <li data-no="Services: Forsikring (Tryg)" data-en="Services: Insurance (Tryg)">Services: Forsikring (Tryg)</li>
+              <li data-no="Services: Forbrukerkreditt" data-en="Services: Consumer Credit">Services: Forbrukerkreditt</li>
+              <li data-no="Services: Abonnement & Gjentakende betaling" data-en="Services: Subscriptions & Recurring Payment">Services: Abonnement & Gjentakende betaling</li>
+            </ul>
+          </div>
+
+          <div class="elkjop-cat">
+            <div class="elkjop-cat-header">
+              <span class="elkjop-cat-name" data-no="Teknologi" data-en="Technology">Teknologi</span>
+              <span class="elkjop-cat-count">9</span>
+            </div>
+            <ul class="elkjop-list">
+              <li>Gaming: NVIDIA RTX / DLSS / AI / Studio</li>
+              <li>Computing: MacBook Air M3</li>
+              <li>Computing: McAfee VPN</li>
+              <li>Telecom: ISOD Refresh</li>
+              <li>TELE: OURA Ring 4</li>
+              <li>SkjermSmart-sertifisering</li>
+            </ul>
+          </div>
+
+          <div class="elkjop-cat">
+            <div class="elkjop-cat-header">
+              <span class="elkjop-cat-name" data-no="Personlig utvikling" data-en="Personal Development">Personlig utvikling</span>
+              <span class="elkjop-cat-count">6</span>
+            </div>
+            <ul class="elkjop-list">
+              <li data-no="Self Dev: Kroppsspråk" data-en="Self Dev: Body Language">Self Dev: Body Language</li>
+              <li data-no="Self Dev: Relasjonsbygging" data-en="Self Dev: Building Relations">Self Dev: Building Relations</li>
+              <li data-no="Self Dev: Forhandlingsteknikk" data-en="Self Dev: Negotiation Technique">Self Dev: Forhandlingsteknikk</li>
+              <li>Self Dev: Trusted Advisor</li>
+              <li>Self Dev: Masterclass</li>
+              <li data-no="Self Dev: Gi effektiv tilbakemelding" data-en="Self Dev: Giving Effective Feedback">Self Dev: Gi effektiv tilbakemelding</li>
+            </ul>
+          </div>
+
+          <div class="elkjop-cat">
+            <div class="elkjop-cat-header">
+              <span class="elkjop-cat-name" data-no="Intro & B2B" data-en="Intro & B2B">Intro & B2B</span>
+              <span class="elkjop-cat-count">14</span>
+            </div>
+            <ul class="elkjop-list">
+              <li data-no="Intro: Våre butikker & salgsmodell" data-en="Intro: Our Stores & Sales Model">Intro: Våre butikker & salgsmodell</li>
+              <li data-no="Intro: Bærekraft" data-en="Intro: Sustainability">Intro: Bærekraft</li>
+              <li data-no="Intro: Kundeklubb & fordeler" data-en="Intro: Loyalty Club & Benefits">Intro: Kundeklubb & fordeler</li>
+              <li data-no="Intro: Prismatch & bonusmodell" data-en="Intro: Price Match & Bonus Model">Intro: Prismatch & bonusmodell</li>
+              <li>B2B: Meet the Business Customer</li>
+              <li>B2B: Digital Workplace</li>
+              <li>B2B: Customer Onboarding</li>
+            </ul>
+          </div>
 
         </div>
       </div>
     </section>
+
     <section id="fritid">
   <div class="container">
-    <h2 class="reveal">Fritid &amp; prosjekter</h2>
-    <p class="section-sub reveal">
+    <h2 class="reveal" data-no="Fritid &amp; prosjekter" data-en="Hobbies &amp; projects">Fritid &amp; prosjekter</h2>
+    <p class="section-sub reveal" data-no="Det jeg holder på med på siden av studiet" data-en="What I work on outside of studies">
       Det jeg holder på med på siden av studiet
     </p>
     <div class="projects reveal">
-    <a
-        href="https://dsalt.no"
-        target="_blank"
-        rel="noopener"
-        class="project"
-      >
+      <a href="https://dsalt.no" target="_blank" rel="noopener" class="project">
         <div class="project-icon">🌐</div>
         <div class="project-content">
           <h3>DSALT.no</h3>
-          <p>
-            Satt opp og drifter nettsiden til DSALT. Fra design til
-            publisering.
+          <p data-no="Satt opp og drifter nettsiden til DSALT. Fra design til publisering." data-en="Set up and run the DSALT website. From design to deployment.">
+            Satt opp og drifter nettsiden til DSALT. Fra design til publisering.
           </p>
-          <span class="project-link">Besøk siden →</span>
+          <span class="project-link" data-no="Besøk siden →" data-en="Visit site →">Besøk siden →</span>
         </div>
       </a>
 
       <div class="project">
         <div class="project-icon">🤖</div>
         <div class="project-content">
-          <h3>Lokal AI-oppsett</h3>
-          <p>
+          <h3 data-no="Lokal AI-oppsett" data-en="Local AI setup">Lokal AI-oppsett</h3>
+          <p data-no="Jeg kjører Claude og Aider lokalt via terminalen, både som en personlig assistent og for å utforske hvordan AI kan brukes i praksis." data-en="I run Claude and Aider locally via the terminal, both as a personal assistant and to explore how AI can be used in practice.">
             Jeg kjører Claude og Aider lokalt via terminalen, både som en personlig assistent og for å utforske hvordan AI kan brukes i praksis.
           </p>
         </div>
@@ -255,27 +394,22 @@
       <div class="project">
         <div class="project-icon">⚡</div>
         <div class="project-content">
-          <h3>ChatGPT-bot i terminal</h3>
-          <p>
-            Egenbygd bot i Ollama koblet til OpenAI sitt API for å kunne ha rask tilgang til AI!
+          <h3 data-no="ChatGPT-bot i terminal" data-en="ChatGPT bot in terminal">ChatGPT-bot i terminal</h3>
+          <p data-no="Egenbygd bot i Ollama koblet til OpenAI sitt API for å kunne ha rask tilgang til AI rett fra kommandolinjen." data-en="Custom-built bot in Ollama connected to the OpenAI API for quick access to AI directly from the command line.">
+            Egenbygd bot i Ollama koblet til OpenAI sitt API for å kunne ha rask tilgang til AI
             rett fra kommandolinjen.
           </p>
         </div>
       </div>
 
-      <a
-        href="https://andersklevaas1.github.io"
-        target="_blank"
-        rel="noopener"
-        class="project"
-      >
+      <a href="https://andersklevaas1.github.io" target="_blank" rel="noopener" class="project">
         <div class="project-icon">🏝️</div>
         <div class="project-content">
           <h3>Code Island</h3>
-          <p>
+          <p data-no="Hybrid læringsspill som lærer bort programmering gjennom et fysisk brettspill kombinert med en digital løsning. Over 200 spørsmål, 6 tematiske øyer og 40+ sjansekort." data-en="Hybrid learning game that teaches programming through a physical board game combined with a digital solution. Over 200 questions, 6 thematic islands and 40+ chance cards.">
             Hybrid læringsspill som lærer bort programmering gjennom et fysisk brettspill kombinert med en digital løsning. Over 200 spørsmål, 6 tematiske øyer og 40+ sjansekort.
           </p>
-          <span class="project-link">Besøk Code Island →</span>
+          <span class="project-link" data-no="Besøk Code Island →" data-en="Visit Code Island →">Besøk Code Island →</span>
         </div>
       </a>
     </div>
@@ -286,21 +420,21 @@
     <div class="featured-project reveal">
       <div class="featured-tag">
         <span class="featured-dot"></span>
-        Pågående hobbyprosjekt
+        <span data-no="Pågående hobbyprosjekt" data-en="Ongoing hobby project">Pågående hobbyprosjekt</span>
       </div>
       <h2 class="featured-title">GitHub Profile Analyzer</h2>
-      <p class="featured-subtitle">
+      <p class="featured-subtitle" data-no="Et verktøy som analyserer GitHub-profiler og gir innsikt i bidrag, repositories og aktivitetsmønstre." data-en="A tool that analyzes GitHub profiles and provides insights into contributions, repositories and activity patterns.">
         Et verktøy som analyserer GitHub-profiler og gir innsikt i bidrag,
         repositories og aktivitetsmønstre.
       </p>
 
       <div class="featured-content">
-        <p>
+        <p data-no="GitHub Profile Analyzer lar deg søke opp en hvilken som helst GitHub-bruker og få en visuell oversikt over profilen deres. Verktøyet henter data direkte fra GitHub sitt API og presenterer det på en ryddig og lettlest måte." data-en="GitHub Profile Analyzer lets you look up any GitHub user and get a visual overview of their profile. The tool fetches data directly from the GitHub API and presents it in a clean and readable way.">
           GitHub Profile Analyzer lar deg søke opp en hvilken som helst GitHub-bruker
           og få en visuell oversikt over profilen deres. Verktøyet henter data
           direkte fra GitHub sitt API og presenterer det på en ryddig og lettlest måte.
         </p>
-        <p>
+        <p data-no="Prosjektet er bygget med vanilla JavaScript og hostet på Cloudflare Pages for rask global levering." data-en="The project is built with vanilla JavaScript and hosted on Cloudflare Pages for fast global delivery.">
           Prosjektet er bygget med vanilla JavaScript og hostet på Cloudflare Pages
           for rask global levering.
         </p>
@@ -320,6 +454,8 @@
           target="_blank"
           rel="noopener"
           class="btn btn-primary"
+          data-no="Prøv GitHub Analyzer →"
+          data-en="Try GitHub Analyzer →"
         >
           Prøv GitHub Analyzer →
         </a>
@@ -330,11 +466,11 @@
 
     <section id="kontakt">
       <div class="container">
-        <h2 class="reveal">Kontakt</h2>
-        <p class="section-sub reveal">Ta gjerne kontakt</p>
+        <h2 class="reveal" data-no="Kontakt" data-en="Contact">Kontakt</h2>
+        <p class="section-sub reveal" data-no="Ta gjerne kontakt" data-en="Feel free to reach out">Ta gjerne kontakt</p>
         <div class="contact-grid reveal">
-          <a href="mailto:din@epost.no" class="contact-card">
-            <div class="contact-label">E-post</div>
+          <a href="mailto:anders@klevaas.no" class="contact-card">
+            <div class="contact-label" data-no="E-post" data-en="Email">E-post</div>
             <div class="contact-value">anders@klevaas.no</div>
           </a>
           <a
@@ -364,6 +500,48 @@
     </footer>
 
     <script>
+  // Language switcher
+  const twWords = {
+    no: ["AI", "Datasikkerhet", "UX & Design", "Webutvikling", "Informasjonssystemer"],
+    en: ["AI", "Cybersecurity", "UX & Design", "Web Development", "Information Systems"]
+  };
+  let currentLang = localStorage.getItem("lang") || "no";
+  let twTimer = null;
+
+  function applyLang(l) {
+    currentLang = l;
+    document.documentElement.lang = l === "no" ? "no" : "en";
+    document.querySelectorAll("[data-no]").forEach(el => {
+      el.textContent = l === "no" ? el.dataset.no : el.dataset.en;
+    });
+    const btn = document.querySelector(".lang-toggle");
+    if (btn) btn.textContent = l === "no" ? "EN" : "NO";
+    localStorage.setItem("lang", l);
+    restartTypewriter(l);
+  }
+
+  function restartTypewriter(l) {
+    if (twTimer) clearTimeout(twTimer);
+    const el = document.querySelector(".typewriter-word");
+    if (!el) return;
+    const words = twWords[l] || twWords.no;
+    let wi = 0, ci = 0, deleting = false;
+    function tick() {
+      const word = words[wi];
+      el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+      if (!deleting && ci > word.length) { deleting = true; twTimer = setTimeout(tick, 1400); return; }
+      if (deleting && ci < 0) { deleting = false; wi = (wi + 1) % words.length; ci = 0; twTimer = setTimeout(tick, 400); return; }
+      twTimer = setTimeout(tick, deleting ? 55 : 90);
+    }
+    tick();
+  }
+
+  document.querySelector(".lang-toggle")?.addEventListener("click", () => {
+    applyLang(currentLang === "no" ? "en" : "no");
+  });
+
+  applyLang(currentLang);
+
   // Footer-år
   document.getElementById("year").textContent = new Date().getFullYear();
 
