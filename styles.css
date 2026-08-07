@@ -1123,6 +1123,12 @@ footer {
   margin-top: 40px;
 }
 
+.version-tag {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  margin-left: 4px;
+}
+
 /* ---------- REVEAL-ANIMASJON ---------- */
 .reveal {
   opacity: 0;
